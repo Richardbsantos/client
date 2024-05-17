@@ -4,7 +4,7 @@ import { HiArrowRight, HiArrowLeft } from "react-icons/hi";
 const Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const data = [
-    "https://futuroastronomo.com.br/wp-content/uploads/2023/05/celular-em-promocao-1024x535.webp",
+    "https://novapost.com.br/wp-content/uploads/2023/11/iphone-15-pro-analise-nova-post-1-1536x864.jpg",
     "https://cdn.braziliantimes.com/website/website/base/fcd/291/335/993-621-promo____rs_especiais_para_o_outono.jpg",
     "https://s2-g1.glbimg.com/UPvociK9PRltRhzHnwjwVfqxmZ8=/0x0:1473x788/1008x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2023/R/w/scbFDDTUmSTVZWu8s7uA/captura-de-tela-2023-09-12-143827.png",
     "https://s.zst.com.br/cms-assets/2023/07/iphone-1-.webp",
@@ -17,7 +17,7 @@ const Banner = () => {
   };
   return (
     <div className="w-full h-auto overflow-x-hidden">
-      <div className="h-[650px] w-screen relative">
+      <div className="h-[500px] w-screen relative">
         <div
           style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
           className="w-[400vw] h-full flex transition-transform duration-1000"

@@ -1,53 +1,54 @@
 import React from "react";
 import { ImGithub } from "react-icons/im";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaInstagram,
-  FaYoutube,
+import {    
+  FaInstagram,  
   FaHome,
 } from "react-icons/fa";
 import { MdLocationOn } from "react-icons/md";
 import { BsPersonFill, BsPaypal } from "react-icons/bs";
-import {  paymentLogo } from "../assets";
+import { paymentLogo } from "../assets";
 
-const socialLinksArray = [
-    { name: "instagram", icon: <FaInstagram /> },
+interface SocialLink {
+  name: string;
+  icon: JSX.Element;
+  link: string;
+}
+
+const socialLinksArray: SocialLink[] = [
+  { name: "instagram", icon: <FaInstagram />, link: "https://www.instagram.com/darcioserafimoficial" },
 ];
 
-const SocialLinks = () => {
+const SocialLinks: React.FC = () => {
   return (
     <div className="flex gap-3 text-base text-gray-400">
       {socialLinksArray.map((item) => (
-        <span
-          key={item?.name}
+        <a
+          key={item.name}
+          href={item.link}
+          target="_blank"
+          rel="noopener noreferrer"
           className="p-2 border border-gray-700 rounded-full hover:text-white hover:border-white duration-300 cursor-pointer"
         >
-          {item?.icon}
-        </span>
+          {item.icon}
+        </a>
       ))}
     </div>
   );
 };
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
-    <div className="bg-black text-[#949494] py-20">
+    <div className="bg-black text-[#949494] p-5">
       <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-4 gap-4">
         <div className="flex flex-col gap-7">
-         
-          <p className="text-white text-sm tracking-wide">© </p>
+          <p className="text-white text-sm tracking-wide"> Formas de Pagamento</p>
           <img className="w-56" src={paymentLogo} alt="paymentLogo" />
-
           <SocialLinks />
         </div>
         <div>
-          <h2 className="text-2xl font-semibold text-white mb-4">Locate us</h2>
+          <h2 className="text-2xl font-semibold text-white mb-4"></h2>
           <div className="text-base flex flex-col gap-2">
-            <p>Meu endereço</p>
-            <p>Meu telefone</p>
-            <p>Phone: </p>
-            <p>e-mail: </p>
+            
           </div>
         </div>
         <div>
