@@ -102,7 +102,7 @@ const CartItem = () => {
           <span>
             <HiOutlineArrowLeft />
           </span>
-          go shopping
+          Comprar mais produtos
         </button>
       </Link>
       <ToastContainer

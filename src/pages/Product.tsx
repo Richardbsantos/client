@@ -1,4 +1,4 @@
-import React , { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { MdOutlineStar } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
@@ -8,22 +8,40 @@ import {
   increamentQuantity,
 } from "../redux/bazarSlice";
 import { ToastContainer, toast } from "react-toastify";
+import { RootState } from "../redux/store";
 
-const Product = () => {
+interface ProductDetails {
+  _id: string;
+  id?: string;
+  image: string;
+  isNew?: boolean;
+  title: string;
+  oldPrice?: number;
+  price: number;
+  description: string;
+  quantity?: number;
+  category?: string;
+}
+
+const Product: React.FC = () => {
   const dispatch = useDispatch();
-  const [details, setDetails] = useState({});
-  const productData = useSelector((state) => state.bazar.productData);
+  const [details, setDetails] = useState<ProductDetails | null>(null);
+  const productData = useSelector((state: RootState) => state.bazar.productData);
 
-  const location = useLocation();
+  const location = useLocation<{ item: ProductDetails }>();
+
   useEffect(() => {
-    productData?.length > 0
-      ? productData.find((item) =>
-          item?.id === location.state.item._id
-            ? setDetails(item)
-            : setDetails(location.state.item)
-        )
-      : setDetails(location.state.item);
+    if (productData?.length > 0) {
+      const product = productData.find(
+        (item) => item?.id === location.state.item._id
+      );
+      setDetails(product || location.state.item);
+    } else {
+      setDetails(location.state.item);
+    }
   }, [location, productData]);
+
+  if (!details) return null;
 
   return (
     <div>
@@ -107,7 +125,7 @@ const Product = () => {
               </div>
             </div>
             <button
-              onClick={() =>
+              onClick={() => {
                 dispatch(
                   addToCart({
                     _id: details._id,
@@ -117,8 +135,9 @@ const Product = () => {
                     quantity: 1,
                     description: details.description,
                   })
-                ) & toast.success(`${details.title} is added`)
-              }
+                );
+                toast.success(`${details.title} is added`);
+              }}
               className="bg-black text-white py-3 px-6 active:bg-gray-800"
             >
               add to cart

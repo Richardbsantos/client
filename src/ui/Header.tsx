@@ -10,22 +10,13 @@ interface NavigationItem {
 }
 
 const navigation: NavigationItem[] = [
+ 
+  
   {
-    title: "Home",
-    link: "/",
+    title: "Minha conta",
+    link: "/conta",
   },
-  {
-    title: "Shop",
-    link: "/shop",
-  },
-  {
-    title: "Promoção",
-    link: "/offers",
-  },
-  {
-    title: "Contato",
-    link: "/contact",
-  },
+  
 ];
 
 interface HeaderLinkProps {
@@ -49,8 +40,9 @@ const Header: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
 
   return (
-    <div className="w-full h-20 bg-white font-titleFont border-b-[1px] border-b-gray-800 sticky top-0 z-50">
-      <div className="max-w-screen-xl h-full mx-auto flex items-center justify-between px-4">
+    <div className="w-full p-2 bg-white font-titleFont border-b-[1px] border-b-gray-800 sticky top-0 z-50">
+      <div className="max-w-screen-xl h-20 h-full mx-auto flex items-center justify-between px-4">        
+          
         {/* Logo */}
         <Link to="/">
           <img src={logoDark} alt="logoDark" className="w-28" />
@@ -103,6 +95,10 @@ const Header: React.FC = () => {
           </button>
         </div>
       </div>
+           
+  
+
+
     </div>
   );
 };

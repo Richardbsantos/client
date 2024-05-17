@@ -12,11 +12,7 @@ import { BsPersonFill, BsPaypal } from "react-icons/bs";
 import {  paymentLogo } from "../assets";
 
 const socialLinksArray = [
-  { name: "github", icon: <ImGithub /> },
-  { name: "youbue", icon: <FaYoutube /> },
-  { name: "facebook", icon: <FaFacebookF /> },
-  { name: "twitter", icon: <FaTwitter /> },
-  { name: "instagram", icon: <FaInstagram /> },
+    { name: "instagram", icon: <FaInstagram /> },
 ];
 
 const SocialLinks = () => {
@@ -40,7 +36,7 @@ const Footer = () => {
       <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-4 gap-4">
         <div className="flex flex-col gap-7">
          
-          <p className="text-white text-sm tracking-wide">© ReactBD.com</p>
+          <p className="text-white text-sm tracking-wide">© </p>
           <img className="w-56" src={paymentLogo} alt="paymentLogo" />
 
           <SocialLinks />
