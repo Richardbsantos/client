@@ -26,15 +26,15 @@ const Login: React.FC = () => {
   const provider = new GoogleAuthProvider();
 
   const handleLogin = () => {
-    signInWithPopup(auth, provider.setCustomParameters({ prompt: "select_account" }))
+    signInWithPopup(auth, provider)
       .then((result) => {
         const user = result.user as User;
         dispatch(
           addUser({
-            _id: user._id,
-            name: user.name,
+            _id: user.uid, // Use uid em vez de _id
+            name: user.displayName,
             email: user.email,
-            image: user.image,
+            image: user.photoURL,
           })
         );
         setTimeout(() => {
@@ -45,6 +45,7 @@ const Login: React.FC = () => {
         console.log(error);
       });
   };
+  
 
   const handleSignOut = () => {
     signOut(auth)

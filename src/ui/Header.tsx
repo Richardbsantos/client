@@ -84,11 +84,7 @@ const Header: React.FC = () => {
               />
             </Link>
 
-            {userInfo && (
-              <p className="text-base font-titleFont font-semibold underline underline-offset-2">
-                {userInfo.name}
-              </p>
-            )}
+           
           </div>
           <button className="md:hidden">
             <FiMenu className="w-6 h-6 text-gray-950" />
