@@ -50,7 +50,7 @@ const Header: React.FC = () => {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="Pesquisar produtos"
-            className="px-60 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:border-blue-500"
+            className="px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:border-blue-500"
           />
           <button className="px-4 py-3 bg-blue-500 text-white rounded-r-md focus:outline-none focus:bg-blue-600">
             <FiSearch />
@@ -79,7 +79,6 @@ const Header: React.FC = () => {
                 alt="userLogo"
               />
             </Link>
-
             {userInfo && (
               <p className="text-base font-titleFont font-semibold underline underline-offset-2">
                 {userInfo.name}
@@ -91,34 +90,6 @@ const Header: React.FC = () => {
           </button>
         </div>
       </div>
-      <div className="max-w-screen-xl mx-auto flex justify-center mt-4">
-        {/* Container de categorias */}
-        <div className="flex items-center gap-x-4">
-          <Link to="/Samsung" className="text-base font-semibold hover:text-orange-700 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
-            Categoria
-          </Link>
-          {/* Link para categoria de iPhone */}
-          <Link to="/iphones" className="text-base font-semibold hover:text-orange-700 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
-            iPhones
-          </Link>
-          {/* Adicione mais links de categoria aqui */}
-          <Link to="/Samsung" className="text-base font-semibold hover:text-orange-700 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
-            Samsung
-          </Link>
-          <Link to="/Motorola" className="text-base font-semibold hover:text-orange-700 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
-            Motorola
-          </Link>
-          <Link to="/Smartwatches" className="text-base font-semibold hover:text-orange-700 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
-            Smartwatches
-          </Link>
-          {/* Link para categoria de acessórios */}
-          <Link to="/acessorios" className="text-base font-semibold hover:text-orange-700 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
-            Acessórios
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
-};
 
-export default Header;
+      {/* New container for category links */}
+      <div className="max-w-screen-xl mx-auto flex items-center

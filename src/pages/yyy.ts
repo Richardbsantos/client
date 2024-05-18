@@ -123,23 +123,23 @@ const Product: React.FC = () => {
                   +
                 </button>
               </div>
-                </div>
-                <button
-                  onClick={() => {
-                    dispatch(
-                      addToCart({
-                        _id: details._id,
-                        title: details.title,
-                        image: details.image,
-                        price: details.price,
-                        quantity: 1,
-                        description: details.description,
-                      })
-                    );
-                    toast.success(`${details.title} is added`);
-                  }}
-                  className="bg-black text-white py-3 px-6 active:bg-gray-800"
-                >
+            </div>
+            <button
+              onClick={() => {
+                dispatch(
+                  addToCart({
+                    _id: details._id,
+                    title: details.title,
+                    image: details.image,
+                    price: details.price,
+                    quantity: 1,
+                    description: details.description,
+                  })
+                );
+                toast.success(`${details.title} is added`);
+              }}
+              className="bg-black text-white py-3 px-6 active:bg-gray-800"
+            >
               add to cart
             </button>
           </div>
