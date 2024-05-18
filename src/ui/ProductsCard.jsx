@@ -38,8 +38,8 @@ const ProductsCard = ({ product }) => {
           </div>
           <div className="text-sm relative w-28 flex justify-end overflow-hidden">
             <div className="flex gap-2 transform group-hover:translate-x-24 transition-transform duration-500">
-              <p className="line-through text-gray-500">${product.oldPrice}</p>
-              <p className="font-semibold">${product.price}</p>
+              <p className="line-through text-gray-500">R${product.oldPrice}</p>
+              <p className="font-semibold">R${product.price}</p>
             </div>
             <p
               onClick={() => {
