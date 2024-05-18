@@ -91,11 +91,12 @@ const Header: React.FC = () => {
           </button>
         </div>
       </div>
+        {/* linha do container */}
           <div className="container mx-auto mt-4 border-b border-gray-200">
           </div>
       <div className="max-w-screen-xl mx-auto flex justify-center mt-4">
         {/* Container de categorias */}
-        <div className="flex items-center gap-x-4">
+        <div className="flex items-center gap-x-9">
           <Link to="/Samsung" className="text-base font-semibold hover:text-orange-700 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
             Categoria
           </Link>
