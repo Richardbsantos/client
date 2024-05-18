@@ -50,7 +50,7 @@ const Login: React.FC = () => {
   const handleSignOut = () => {
     signOut(auth)
       .then(() => {
-        toast.success("Log Out Successfully!");
+        toast.success("Deslogado com Successo!");
         dispatch(removeUser());
       })
       .catch((error) => {
