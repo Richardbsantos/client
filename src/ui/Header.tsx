@@ -11,6 +11,10 @@ interface NavigationItem {
 
 const navigation: NavigationItem[] = [
   {
+    title: "venda seu aparelho",
+    link: "/sale_cel",
+  },
+  {
     title: "Minha conta",
     link: "/login",
   },
