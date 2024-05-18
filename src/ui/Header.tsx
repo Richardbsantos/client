@@ -12,7 +12,7 @@ interface NavigationItem {
 const navigation: NavigationItem[] = [
   {
     title: "Minha conta",
-    link: "/conta",
+    link: "/login",
   },
 ];
 
