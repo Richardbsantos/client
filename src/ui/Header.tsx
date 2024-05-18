@@ -92,41 +92,43 @@ const Header: React.FC = () => {
         </div>
       </div>
         {/* linha do container */}
-          <div className="container mx-auto mt-4 border-b border-gray-200">
-          </div>
-      <div className="max-w-screen-xl mx-auto flex justify-center mt-4">
-        {/* Container de categorias */}
-        <div className="flex items-center gap-x-9">
-          <Link to="/Samsung" className="text-base font-semibold hover:text-orange-700 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
-            Categoria
-          </Link>
-          {/* Link para categoria de iPhone */}
-          <Link to="/iphones" className="text-base font-semibold hover:text-orange-700 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
-            iPhones
-          </Link>
-          {/* Adicione mais links de categoria aqui */}
-          <Link to="/Samsung" className="text-base font-semibold hover:text-orange-700 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
-            Samsung
-          </Link>
-          <Link to="/Motorola" className="text-base font-semibold hover:text-orange-700 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
-            Motorola
-          </Link>
-          <Link to="/Smartwatches" className="text-base font-semibold hover:text-orange-700 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
-            Smartwatches
-          </Link>
-          {/* Link para categoria de acessórios */}
-          <Link to="/acessorios" className="text-base font-semibold hover:text-orange-700 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
-            Acessórios
-          </Link>
-          <Link
-            to="/Outlet"
-            className="rounded-md bg-orange-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600"
-          >
-            OUTLET
-          </Link>
+        <div className="container mx-auto mt-4 border-b border-gray-200">
+  {/* Empty container (optional) */}
+</div>
+<div className="max-w-screen-xl mx-auto flex justify-center mt-4">
+  {/* Container de categorias */}
+  <div className="flex flex-wrap items-center gap-x-9">
+    <Link to="/Samsung" className="text-base font-semibold hover:text-orange-700 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
+      Categoria
+    </Link>
+    {/* Link para categoria de iPhone */}
+    <Link to="/iphones" className="text-base font-semibold hover:text-orange-700 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
+      iPhones
+    </Link>
+    {/* Adicione mais links de categoria aqui */}
+    <Link to="/Samsung" className="text-base font-semibold hover:text-orange-700 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
+      Samsung
+    </Link>
+    <Link to="/Motorola" className="text-base font-semibold hover:text-orange-700 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
+      Motorola
+    </Link>
+    <Link to="/Smartwatches" className="text-base font-semibold hover:text-orange-700 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
+      Smartwatches
+    </Link>
+    {/* Link para categoria de acessórios */}
+    <Link to="/acessorios" className="text-base font-semibold hover:text-orange-700 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
+      Acessórios
+    </Link>
 
-        </div>
-      </div>
+    <Link
+      to="/Outlet"
+      className="rounded-md bg-orange-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600 sm:hidden md:flex"
+    >
+      OUTLET
+    </Link>
+  </div>
+</div>
+
     </div>
   );
 };
