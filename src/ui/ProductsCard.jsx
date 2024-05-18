@@ -57,7 +57,7 @@ const ProductsCard = ({ product }) => {
               }}
               className="absolute z-20 w-[100px] text-gray-500 hover:text-gray-900 flex items-center gap-1 top-0 transform -translate-x-32 group-hover:translate-x-0 transition-transform cursor-pointer duration-500"
             >
-              add to cart
+              adicionar 
               <span>
                 <BsArrowRight />
               </span>
@@ -71,7 +71,7 @@ const ProductsCard = ({ product }) => {
       <div className="absolute top-4 right-0">
         {product.isNew && (
           <p className="bg-black text-white font-semibold font-titleFont px-6 py-1">
-            Sale
+            Oferta
           </p>
         )}
       </div>
