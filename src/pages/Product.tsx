@@ -136,7 +136,7 @@ const Product: React.FC = () => {
                         description: details.description,
                       })
                     );
-                    toast.success(`${details.title} is added`);
+                    toast.success(`${details.title} foi adicionado`);
                   }}
                   className="bg-black text-white py-3 px-6 active:bg-gray-800"
                 >

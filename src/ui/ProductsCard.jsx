@@ -53,7 +53,7 @@ const ProductsCard = ({ product }) => {
                     description: product.description,
                   })
                 );
-                toast.success(`${product.title} is added`);
+                toast.success(`${product.title} Foi adicionado`);
               }}
               className="absolute z-20 w-[100px] text-gray-500 hover:text-gray-900 flex items-center gap-1 top-0 transform -translate-x-32 group-hover:translate-x-0 transition-transform cursor-pointer duration-500"
             >
