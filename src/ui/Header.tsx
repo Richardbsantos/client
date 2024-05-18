@@ -52,7 +52,7 @@ const Header: React.FC = () => {
             placeholder="Pesquisar produtos"
             className="px-60 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:border-blue-500"
           />
-          <button className="px-4 py-3 bg-blue-500 text-white rounded-r-md focus:outline-none focus:bg-blue-600">
+          <button className="px-4 py-3 bg-orange-700 text-white rounded-r-md focus:outline-none bg-orange-700">
             <FiSearch />
           </button>
         </div>
