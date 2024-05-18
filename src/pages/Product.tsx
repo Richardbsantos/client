@@ -65,10 +65,10 @@ const Product: React.FC = () => {
             <h2 className="text-4xl font-semibold">{details.title}</h2>
             <div className="flex items-center gap-4 mt-3">
               <p className="line-through font-base text-gray-500">
-                ${details.oldPrice}
+                R${details.oldPrice}
               </p>
               <p className="text-2xl font-medium text-gray-900">
-                ${details.price}
+                R${details.price}
               </p>
             </div>
           </div>
@@ -85,7 +85,7 @@ const Product: React.FC = () => {
           <p className="text-base text-gray-500 -mt-3">{details.description}</p>
           <div className="flex gap-4">
             <div className="w-52 flex items-center justify-between text-gray-500 gap-4 border p-3">
-              <p className="text-sm">Quantity</p>
+              <p className="text-sm">Quantidade</p>
               <div className="flex items-center gap-4 text-sm font-semibold">
                 <button
                   onClick={() =>
